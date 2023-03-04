@@ -1,0 +1,26 @@
+.sort {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.sortLabel {
+  font-size: 15px;
+}
+.sortType {
+  cursor: pointer;
+  font-size: 15px;
+  color: rgb(255, 106, 0);
+}
+.sortPopup {
+  top: 20px;
+  padding: 10px;
+  position: absolute;
+  background-color: #fff;
+  li {
+    cursor: pointer;
+    &:hover {
+      color: rgb(255, 106, 0);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.cartEmpty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+.cartEmptyIcon {
+  margin: 50px auto;
+  text-align: center;
+  width: 200px;
+  img {
+    width: 100%;
+  }
+}
+.button {
+  margin-top: 20px;
+  display: inline-flex;
+  background-color: #000;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  &:active {
+    background-color: #454444;
+  }
+  span {
+    color: #ffffff;
+  }
+}
