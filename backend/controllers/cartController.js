@@ -1,7 +1,6 @@
 import mongoose from 'mongoose'
 import cartModel from '../models/cartModel.js'
 
-//Получить все товары из корзины
 export const getCartItems = async (req, res) => {
   try {
     const cartItems = await cartModel.find({})
@@ -11,7 +10,6 @@ export const getCartItems = async (req, res) => {
   }
 }
 
-// Добавить в корзину
 export const addToCart = async (req, res) => {
   const { title, imgUrl, price, quantity, weight, _id } = req.body
   const findCartItem = await cartModel.findById({ _id })
@@ -40,7 +38,7 @@ export const addToCart = async (req, res) => {
   }
 }
 
-//Удаление из корзины
+
 export const removeCartItem = async (req, res) => {
   const id = req.params.id
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -53,7 +51,6 @@ export const removeCartItem = async (req, res) => {
   }
   res.status(200).json(deletetedCartItem)
 }
-//Увеличить счетчик в корзине
 
 export const updateCountCartPlus = async (req, res) => {
   const { id } = req.params

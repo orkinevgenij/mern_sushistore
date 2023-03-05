@@ -2,6 +2,7 @@ import React from 'react'
 import { TiShoppingCart } from 'react-icons/ti'
 import { Link, NavLink } from 'react-router-dom'
 import styles from './Navbar.module.scss'
+
 export const Navbar = () => {
   const activeStyle = {
     color: 'rgb(255, 106, 0)',

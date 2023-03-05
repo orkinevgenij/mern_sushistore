@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getProductsCart, postProductToCart } from '../../../src/redux/slices/cartSlice'
+import React from 'react'
+import { useDispatch } from 'react-redux'
+import { postProductToCart } from '../../../src/redux/slices/cartSlice'
 import styles from './Product.module.scss'
-import { useNavigate } from 'react-router-dom'
 
 export const ProductBlock = ({ title, imgUrl, price, quantity, weight, _id, count }) => {
   const dispatch = useDispatch()

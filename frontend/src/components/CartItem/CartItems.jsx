@@ -1,15 +1,15 @@
 import React from 'react'
+import styles from './CartItems.module.scss'
 import { AiOutlineDelete } from 'react-icons/ai'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from 'react-icons/ai'
 import {
-  removeProductCart,
-  cartItemCountPlus,
   cartItemCountMinus,
+  cartItemCountPlus,
+  removeProductCart,
 } from '../../redux/slices/cartSlice'
 
-import styles from './CartItems.module.scss'
 export const CartItems = ({ title, price, imgUrl, weight, quantity, _id, count }) => {
   const dispatch = useDispatch()
   const removeCartItem = id => {

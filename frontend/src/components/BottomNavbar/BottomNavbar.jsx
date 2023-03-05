@@ -1,8 +1,7 @@
 import React from 'react'
-import styles from './BottomNavbar.module.scss'
-import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCategoryProduct } from '../../redux/slices/filterSlice'
+import styles from './BottomNavbar.module.scss'
 
 const menu = [
   { name: 'Меню', iconMenu: '/img/menu/menu-icon.png' },
@@ -19,6 +18,7 @@ const menu = [
     iconMenu: '/img/menu/set.jpg',
   },
 ]
+
 export const BottomNavbar = () => {
   const dispatch = useDispatch()
   const { categoryProduct } = useSelector(state => state.filter)

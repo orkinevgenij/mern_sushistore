@@ -4,7 +4,7 @@ import axios from 'axios'
 const initialState = {
   products: [],
   totalPrice: 0,
-  responseStatus: 'pending', //oending || success || rejected
+  responseStatus: 'pending', //pending || success || rejected
   responseMessage: '',
 }
 export const postProductToCart = createAsyncThunk('products/postProductToCart', async params => {

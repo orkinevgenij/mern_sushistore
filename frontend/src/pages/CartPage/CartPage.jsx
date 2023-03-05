@@ -6,6 +6,7 @@ import { CartItems } from '../../components/CartItem/CartItems'
 import { getProductsCart } from '../../redux/slices/cartSlice'
 import styles from './CartPage.module.scss'
 import useDocumentTitle from '../../hooks/useDocumentTitle'
+
 export const CartPage = () => {
   useDocumentTitle('Кошик')
   const { products, responseStatus } = useSelector(state => state.cart)

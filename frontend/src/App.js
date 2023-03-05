@@ -7,6 +7,7 @@ import { Contacts } from './pages/Contacts/Contacts'
 import { Home } from './pages/Home/Home'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { fetchProducts } from './redux/slices/productsSlice'
+
 function App() {
   const { categoryProduct, sortType } = useSelector(state => state.filter)
   const dispatch = useDispatch()

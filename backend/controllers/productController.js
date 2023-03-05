@@ -1,5 +1,5 @@
 import productModel from '../models/productModel.js'
-//Получение всех товаров
+
 export const getProducts = async (req, res) => {
   try {
     const category = parseInt(req.query.category) || ['1', '2', '3']
@@ -15,7 +15,6 @@ export const getProducts = async (req, res) => {
         category: category,
       })
       .sort(sortBy)
-
     return res.json(rolls)
   } catch (error) {
     res.status(400).json({ error: error.message })
